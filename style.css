@@ -21,7 +21,6 @@ body {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: auto
 }
-
 #game-canvas {
     /*background-color: #000000;*/
     width:100%;
@@ -36,7 +35,6 @@ body {
     height:100vh;
     font-size: 10vmin;
 }
-
 
 input[type="text"]
 {

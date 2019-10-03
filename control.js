@@ -139,8 +139,7 @@ function handleFrogMovementInput() {
 function handleDirectionalInputs() {
 	
 	if (!frog.knockedAt && pressingUp) {
-		newDirection = "up"
-		
+		newDirection = "up"		
 		if (pressingDirections.length < 2 && pressingDirections.indexOf(newDirection) === -1) {
 			pressingDirections.push(newDirection)
 		}
@@ -178,7 +177,6 @@ function stopPressing(direction) {
 	if (direction === "right") {
 		pressingRight = false
 	}
-	
 	lastLiftedDirection = direction
 	stoppedPressing = counter
 	pressingDirections.splice(pressingDirections.indexOf(direction),1)

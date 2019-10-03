@@ -1,5 +1,6 @@
 
-userDevice = new MobileDetect(window.navigator.userAgent)
+userDevice = new MobileDetect(window.navigator.userAgent);
+userGamepad = null;
 isMobile = userDevice.mobile()
 PIXI.utils.skipHello()
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
@@ -99,12 +100,10 @@ if (window.innerWidth < window.innerHeight) {
 }
 cellSize = window.innerWidth/50
 
-
 pixelHeight = 196
 pixelSize = Math.floor(viewHeight/196)
 gameHeight = pixelSize*pixelHeight
 fingerOnScreen = false;
-soundOn = true
 fullscreen = false
 controlPanel = undefined
 joystick = undefined

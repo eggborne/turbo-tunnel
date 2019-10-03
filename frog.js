@@ -328,23 +328,27 @@ function Frog(vehicle) {
 			var direction = pressingDirections[d]
 			if (direction === "up") {
 				if (this.velocity.y > -this.speed) {
-					this.velocity.y -= this.speed/10
+					// this.velocity.y -= this.speed/10
+					this.velocity.y -= this.speed/6
 				}
 			}
 			if (direction === "down") {
 				if (this.velocity.y < this.speed) {
-					this.velocity.y += this.speed/10 
+					// this.velocity.y += this.speed/10 
+					this.velocity.y += this.speed/6 
 				}
 			}
 			if (direction === "left") {
 				if (this.velocity.x > -this.speed) {
-					this.velocity.x -= this.speed/10
+					// this.velocity.x -= this.speed/10
+					this.velocity.x -= this.speed/6
 				}
 				
 			}
 			if (direction === "right") {
 				if (this.velocity.x < this.speed) {
-					this.velocity.x += this.speed/10
+					// this.velocity.x += this.speed/10
+					this.velocity.x += this.speed/6
 				}				
 			}
 		}

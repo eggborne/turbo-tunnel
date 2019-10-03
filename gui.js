@@ -18,7 +18,15 @@ function TitleScreen() {
 	this.title1 = new PIXI.Text("FROG",this.titleStyle)
 	this.title2 = new PIXI.Text("RACER",this.titleStyle)
 	this.title3 = new PIXI.Text("2019",this.titleStyle)
-	
+
+	this.gamepadMessage = new PIXI.Text("GAMEPAD DETECTED", this.titleStyle);
+	this.gamepadMessage.visible = false;
+	this.gamepadMessage.anchor.set(0.5);
+	this.gamepadMessage.style.fontSize = pixelSize * 4;
+	this.gamepadMessage.style.fill = '#224422';
+	this.gamepadMessage.style.stroke = 0;
+	this.gamepadMessage.x = viewWidth / 2;
+
 	this.title1.anchor.set(0.5)
 	this.title2.anchor.set(0.5)
 	this.title3.anchor.set(0.5)
@@ -86,6 +94,7 @@ function TitleScreen() {
 	this.container.addChild(this.title1)
 	this.container.addChild(this.title2)
 	this.container.addChild(this.title3)
+	this.container.addChild(this.gamepadMessage)
 	// if (!screenVertical) {
 	// 	var toggleStyle = horizMenuStyle
 	// } else {
@@ -105,7 +114,8 @@ function TitleScreen() {
 	if (this.startButton.y-this.highScoreButton.y > this.startButton.height*1.4) {
 		this.highScoreButton.y = this.startButton.y-(this.startButton.height*1.4)
 	}
-	this.musicButton.y = this.soundButton.y = this.highScoreButton.y-this.highScoreButton.height
+	this.musicButton.y = this.soundButton.y = this.highScoreButton.y-this.highScoreButton.height;
+	this.gamepadMessage.y = this.musicButton.y - this.highScoreButton.height;
 	// this.musicButton.y = this.soundButton.y = this.startButton.y-(pixelSize*64)
 	this.highScoreButton.anchor.set(0.5)
 	this.highScoreButton.interactive = true

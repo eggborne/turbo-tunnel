@@ -23,6 +23,9 @@ function update() {
 			}
 		}
 	}
+	if (userGamepad) {
+		userGamepad.monitorForPresses();
+	}
 	if (isMobile) {
 		if (screenVertical) {
 			if (controlPanel.container.alpha+0.05 <= 1) {
@@ -66,8 +69,8 @@ function update() {
 		}
 		
 		handleFrogMovementInput()
-	} else {
-		handleDirectionalInputs()
+	} else {		
+		handleDirectionalInputs();
 		frog.followDirectionalInputs()
 		if ((pressingSpace || pressingShift || pressingDirections.length) && controlPanel.instructions.alpha > 0) {
 			controlPanel.instructions.alpha -= 0.05
